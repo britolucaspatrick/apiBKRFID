@@ -16,7 +16,7 @@ namespace apiBKRFID.Models
     public partial class BKRFIDEntities : DbContext
     {
         public BKRFIDEntities()
-            : base("name=BKRFID")
+            : base("name=BKRFIDEntities")
         {
         }
     

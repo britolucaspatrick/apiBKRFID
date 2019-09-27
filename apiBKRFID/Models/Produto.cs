@@ -14,9 +14,9 @@ namespace apiBKRFID.Models
     
     public partial class Produto
     {
-        public int ID_Produto { get; set; }
         public string ValueTag { get; set; }
         public string CodBarras { get; set; }
         public Nullable<int> Quantidade { get; set; }
+        public int ID_Produto { get; set; }
     }
 }

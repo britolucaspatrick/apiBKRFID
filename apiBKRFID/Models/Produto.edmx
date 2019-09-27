@@ -9,10 +9,10 @@
           <Key>
             <PropertyRef Name="ID_Produto" />
           </Key>
-          <Property Name="ID_Produto" Type="int" Nullable="false" />
           <Property Name="ValueTag" Type="nchar" MaxLength="299" />
           <Property Name="CodBarras" Type="nchar" MaxLength="299" />
           <Property Name="Quantidade" Type="int" />
+          <Property Name="ID_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityContainer Name="BKRFIDModelStoreContainer">
           <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
@@ -26,10 +26,10 @@
           <Key>
             <PropertyRef Name="ID_Produto" />
           </Key>
-          <Property Name="ID_Produto" Type="Int32" Nullable="false" />
           <Property Name="ValueTag" Type="String" MaxLength="299" FixedLength="true" Unicode="true" />
           <Property Name="CodBarras" Type="String" MaxLength="299" FixedLength="true" Unicode="true" />
           <Property Name="Quantidade" Type="Int32" />
+          <Property Name="ID_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityContainer Name="BKRFIDEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Produto" EntityType="Self.Produto" />
@@ -43,10 +43,10 @@
           <EntitySetMapping Name="Produto">
             <EntityTypeMapping TypeName="BKRFIDModel.Produto">
               <MappingFragment StoreEntitySet="Produto">
-                <ScalarProperty Name="ID_Produto" ColumnName="ID_Produto" />
                 <ScalarProperty Name="ValueTag" ColumnName="ValueTag" />
                 <ScalarProperty Name="CodBarras" ColumnName="CodBarras" />
                 <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+                <ScalarProperty Name="ID_Produto" ColumnName="ID_Produto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
