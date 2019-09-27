@@ -8,11 +8,13 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using apiBKRFID.Models;
 
 namespace apiBKRFID.ControllersApi
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProdutoController : ApiController
     {
         private BKRFIDEntities db = new BKRFIDEntities();

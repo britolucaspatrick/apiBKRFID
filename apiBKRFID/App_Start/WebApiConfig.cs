@@ -9,7 +9,11 @@ namespace apiBKRFID
     {
         public static void Register(HttpConfiguration config)
         {
+            if (config == null)
+                return;
+
             // Serviços e configuração da API da Web
+            config.EnableCors();
 
             // Rotas da API da Web
             config.MapHttpAttributeRoutes();
