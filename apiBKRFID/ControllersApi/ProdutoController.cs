@@ -82,6 +82,7 @@ namespace apiBKRFID.ControllersApi
                 return BadRequest(ModelState);
             }
 
+
             db.Produto.Add(produto);
             await db.SaveChangesAsync();
 

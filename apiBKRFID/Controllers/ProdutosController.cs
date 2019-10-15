@@ -42,6 +42,39 @@ namespace apiBKRFID.Controllers
             return View();
         }
 
+        public async Task<ActionResult> GerarBlocoK()
+        {
+            List<DAO.TRegistro_SaldoEstoque> _SaldoEstoques = new List<DAO.TRegistro_SaldoEstoque>();
+            db.Produto.ToList().ForEach(r => 
+            {
+                _SaldoEstoques.Add(new DAO.TRegistro_SaldoEstoque() 
+                {
+                    Cd_produto = r.CodBarras,
+                    Quantidade = Convert.ToDecimal(r.Quantidade.ToString())
+                });
+
+                db.Produto.Remove(r);
+            });
+
+            if (_SaldoEstoques.Count > 0)
+            {
+                string arq = Business.SpedFiscal.ProcessarSpedFiscal(DateTime.Now,
+                                                                 DateTime.Now,
+                                                                 _SaldoEstoques);
+
+                using (System.IO.StreamWriter sw = new System.IO.StreamWriter("c:\\blocoK.txt",
+                                                                              false,
+                                                                              System.Text.Encoding.Default))
+                {
+                    sw.Write(arq + "\r\n");
+                    sw.Close();
+                }
+            }
+            
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
         // POST: Produtos/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
