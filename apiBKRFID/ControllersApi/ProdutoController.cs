@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -37,7 +38,7 @@ namespace apiBKRFID.ControllersApi
 
             return Ok(produto);
         }
-
+        
         // PUT: api/Produto/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutProduto(int id, Produto produto)

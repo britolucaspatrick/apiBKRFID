@@ -1,5 +1,7 @@
-﻿using System;
+﻿using apiBKRFID.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -9,6 +11,8 @@ namespace apiBKRFID.Controllers
 {
     public class ValuesController : ApiController
     {
+        private BKRFIDEntities db = new BKRFIDEntities();
+
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -16,9 +20,10 @@ namespace apiBKRFID.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public IEnumerable<Produto> Get(int id)
         {
-            return "value";
+            IEnumerable <Produto> asd = db.Produto.SqlQuery("select * from produto where valuetag = @id", new SqlParameter("@id", id));
+            return asd;
         }
 
         // POST api/values
