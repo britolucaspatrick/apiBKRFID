@@ -13,7 +13,7 @@ namespace apiBKRFID.Controllers
 {
     public class ProdutosController : Controller
     {
-        private BKRFIDEntities db = new BKRFIDEntities();
+        private BKRFIDEntities1 db = new BKRFIDEntities1();
 
         // GET: Produtos
         public async Task<ActionResult> Index()

@@ -11,8 +11,8 @@
           </Key>
           <Property Name="ValueTag" Type="nchar" MaxLength="299" />
           <Property Name="CodBarras" Type="nchar" MaxLength="299" />
-          <Property Name="Quantidade" Type="int" />
           <Property Name="ID_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quantidade" Type="bit" />
         </EntityType>
         <EntityContainer Name="BKRFIDModelStoreContainer">
           <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
@@ -28,10 +28,10 @@
           </Key>
           <Property Name="ValueTag" Type="String" MaxLength="299" FixedLength="true" Unicode="true" />
           <Property Name="CodBarras" Type="String" MaxLength="299" FixedLength="true" Unicode="true" />
-          <Property Name="Quantidade" Type="Int32" />
           <Property Name="ID_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantidade" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="BKRFIDEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BKRFIDEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Produto" EntityType="Self.Produto" />
         </EntityContainer>
       </Schema>
@@ -39,14 +39,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BKRFIDModelStoreContainer" CdmEntityContainer="BKRFIDEntities">
+        <EntityContainerMapping StorageEntityContainer="BKRFIDModelStoreContainer" CdmEntityContainer="BKRFIDEntities1">
           <EntitySetMapping Name="Produto">
             <EntityTypeMapping TypeName="BKRFIDModel.Produto">
               <MappingFragment StoreEntitySet="Produto">
                 <ScalarProperty Name="ValueTag" ColumnName="ValueTag" />
                 <ScalarProperty Name="CodBarras" ColumnName="CodBarras" />
-                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
                 <ScalarProperty Name="ID_Produto" ColumnName="ID_Produto" />
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

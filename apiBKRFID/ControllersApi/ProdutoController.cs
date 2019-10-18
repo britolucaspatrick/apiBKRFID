@@ -18,12 +18,12 @@ namespace apiBKRFID.ControllersApi
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProdutoController : ApiController
     {
-        private BKRFIDEntities db = new BKRFIDEntities();
+        private BKRFIDEntities1 db = new BKRFIDEntities1();
 
         // GET: api/Produto
         public IQueryable<Produto> GetProduto()
         {
-            return db.Produto;
+            return db.Produto.Where(r => r.Quantidade == true);
         }
 
         // GET: api/Produto/5
@@ -83,8 +83,7 @@ namespace apiBKRFID.ControllersApi
                 return BadRequest(ModelState);
             }
 
-
-            db.Produto.Add(produto);
+            db.Produto.Add(produto);    
             await db.SaveChangesAsync();
 
             return CreatedAtRoute("DefaultApi", new { id = produto.ID_Produto }, produto);

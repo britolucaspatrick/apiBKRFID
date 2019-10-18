@@ -13,16 +13,16 @@ namespace apiBKRFID.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BKRFIDEntities : DbContext
+    public partial class BKRFIDEntities1 : DbContext
     {
-        public BKRFIDEntities()
+        public BKRFIDEntities1()
             : base("name=BKRFIDEntities")
         {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<Produto> Produto { get; set; }

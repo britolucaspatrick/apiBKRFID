@@ -16,30 +16,30 @@ namespace apiBKRFID.Tests.Controllers
         [TestMethod]
         public void Get()
         {
-            // Organizar
-            ValuesController controller = new ValuesController();
+            //// Organizar
+            //ValuesController controller = new ValuesController();
 
-            // Agir
-            IEnumerable<string> result = controller.Get();
+            //// Agir
+            //IEnumerable<string> result = controller.Get();
 
-            // Declarar
-            Assert.IsNotNull(result);
-            Assert.AreEqual(2, result.Count());
-            Assert.AreEqual("value1", result.ElementAt(0));
-            Assert.AreEqual("value2", result.ElementAt(1));
+            //// Declarar
+            //Assert.IsNotNull(result);
+            //Assert.AreEqual(2, result.Count());
+            //Assert.AreEqual("value1", result.ElementAt(0));
+            //Assert.AreEqual("value2", result.ElementAt(1));
         }
 
         [TestMethod]
         public void GetById()
         {
-            // Organizar
-            ValuesController controller = new ValuesController();
+            //// Organizar
+            //ValuesController controller = new ValuesController();
 
-            // Agir
-            string result = controller.Get(5);
+            //// Agir
+            //string result = controller.Get(5);
 
-            // Declarar
-            Assert.AreEqual("value", result);
+            //// Declarar
+            //Assert.AreEqual("value", result);
         }
 
         [TestMethod]

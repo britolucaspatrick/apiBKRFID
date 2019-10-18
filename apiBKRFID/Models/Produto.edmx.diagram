@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74e7153fec1a4b799b995a2224ebe157" Name="Diagram1">
+      <Diagram DiagramId="e2194da44b4d4f128a712c3f7215918b" Name="Diagram1">
         <EntityTypeShape EntityType="BKRFIDModel.Produto" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

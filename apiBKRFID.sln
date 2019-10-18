@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiBKRFID", "apiBKRFID\apiBKRFID.csproj", "{1EAF16D7-BDE6-43B9-88C6-266000A567BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiBKRFID.Tests", "apiBKRFID.Tests\apiBKRFID.Tests.csproj", "{1273B11A-013A-4D37-940D-AE22A131034A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{1EAF16D7-BDE6-43B9-88C6-266000A567BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EAF16D7-BDE6-43B9-88C6-266000A567BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EAF16D7-BDE6-43B9-88C6-266000A567BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1273B11A-013A-4D37-940D-AE22A131034A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1273B11A-013A-4D37-940D-AE22A131034A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1273B11A-013A-4D37-940D-AE22A131034A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1273B11A-013A-4D37-940D-AE22A131034A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
